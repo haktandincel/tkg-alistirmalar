@@ -14,7 +14,7 @@ def isaret(sayi):
     elif sayi < 0:
         return "negatif"
     else:
-        return "Sıfır"
+        return "sıfır"
         
 
 

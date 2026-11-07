@@ -14,13 +14,15 @@
 # - Öğrencilere 30 TL indirim yapılır.
 def bilet_fiyati(yas, ogrenci, hafta_sonu):
     if yas < 0:
-        raise ValueError('yaş negatif olamaz')
+        raise ValueError("yaş negatif olamaz")
     if yas < 6:
         return 0
     fiyat = 150 if hafta_sonu else 100
     if ogrenci:
         fiyat -= 30
     return fiyat
+
+
 # 2. Not ortalaması
 # - Notların ortalamasını döndürür.
 # - Liste boşsa None döndürür.
@@ -28,27 +30,32 @@ def not_ortalamasi(not_listesi):
     if not_listesi is None or len(not_listesi) == 0:
         return
 
-    toplam=0
+    toplam = 0
     for i in range(len(not_listesi)):
         toplam += not_listesi[i]
     return toplam / len(not_listesi)
+
+
 # 3. Ortalama metni
 # - Not listesi boşsa "not yok" döndürür.
 # - Değilse ortalamayı bir ondalık basamağa yuvarlayıp metin olarak döndürür.
 def ortalama_metni(notlar):
-    if (notlar is None):
-        return 'not yok'
+    if notlar is None:
+        return "not yok"
     ort = not_ortalamasi(notlar)
-    if (ort is None):
-        return 'not yok'
+    if ort is None:
+        return "not yok"
     return str(round(ort, 1))
+
 
 # 4. Geçti mi?
 
 # - Puan 50 veya üstüyse True, değilse False döndürür.
 
+
 def gecti_mi(puan):
     return puan >= 50
+
 
 # 5. Sayıya çevir
 # - Metni tam sayıya çevirip döndürür: "42" -> 42
@@ -60,11 +67,10 @@ def sayiya_cevir(metin):
         return None
 
 
-
 # 6. Katılımcı ekle
 # - Adı listenin sonuna ekler ve listeyi döndürür.
 # - Liste verilmezse yeni, boş bir listeye ekler.
-def katilimci_ekle(ad, liste = None):
+def katilimci_ekle(ad, liste=None):
     if liste is None:
         liste = []
     liste.append(ad)
