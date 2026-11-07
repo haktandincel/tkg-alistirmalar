@@ -6,7 +6,7 @@
 
 
 # 1. İşaret
-# Sayı 0'dan büyükse "pozitif", küçükse "negatif", 0 ise "sıfır" döndürün.
+# Sayı 0'dan büyükse "pozitif", küçükse "negatif", 0 ise "Sıfır" döndürün.
 # Örnek: isaret(5) -> "pozitif"
 def isaret(sayi):
     if sayi > 0:
@@ -14,7 +14,7 @@ def isaret(sayi):
     elif sayi < 0:
         return "negatif"
     else:
-        return "sıfır"
+        return "Sıfır"
         
 
 
@@ -49,9 +49,13 @@ def faktoriyel(n):
 # 5. Geçenler
 # Nottan 60 ve üzeri olanları, sıralarını bozmadan yeni bir liste olarak döndürün.
 # Örnek: gecenler([70, 45, 90]) -> [70, 90]
+
 def gecenler(notlar):
     gecen_notlar = []
     for not_ in notlar:
         if not_ >= 60:
             gecen_notlar.append(not_)
     return gecen_notlar
+
+
+
